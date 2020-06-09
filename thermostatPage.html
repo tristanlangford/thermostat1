@@ -1,11 +1,22 @@
-<_temp()>
-up button
-<p>
- current temp
- up button 
- down button
- power saver button
- power saver status 
- usage-level: 
 
+<p>
+ current temp - text field - textarea
+ up button - button
+ down button - button
+ power saver button button/radio
+ power saver status 
+ usage-level: colour display - small text box - colour change.
 </p>
+<html> 
+  <head>
+    <script src='src/thermostat.js'></script>
+  </head>
+  <body>
+    <textarea height='50' width='60'>current temp</textarea>
+    <input type='button' class='up()' value='up'>
+    <input type='button' class='down()' value='down'>
+    <input type="radio" class="powerSaver()" value='on'>
+    <input type="radio" class="powerSaver()" value='off'>
+    <input type='text' width = 10 height='10' class = 'usageLevel()'><p>this will need formating to change colour based on usage</p>
+  </body>
+</html>
