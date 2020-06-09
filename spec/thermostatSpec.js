@@ -29,17 +29,16 @@ describe('Thermostat', function() {
         expect(thermostat.currentTemp()).toEqual(10)
     })
 
-    it ('Creates the thermostat with powerSaving mode off (false)', function () {
-        expect(thermostat.powerModeCheck()).toEqual(false)
+    it ('Creates the thermostat with powerSaving mode off (true)', function () {
+        expect(thermostat.powerModeCheck()).toEqual(true)
     });
 
-    it ('Can have powerSaving mode turned to on using changeMode', function() {
+    it ('Can have powerSaving mode turned to off using changeMode', function() {
         thermostat.changeMode()
-        expect(thermostat.powerModeCheck()).toBeTruthy();
+        expect(thermostat.powerModeCheck()).toBeFalsy();
     })
 
     it ('Will not go above 25 when powerSaver mode is true', function() {
-        thermostat.changeMode();
         for (let i = 0; i < 10; i++) {
             thermostat.up()
         }
@@ -47,6 +46,7 @@ describe('Thermostat', function() {
     })
 
     it ('Will not go above 32 when powerSaver mode is false', function() {
+        thermostat.changeMode()
         for (let i = 0; i < 15; i++) {
             thermostat.up()
         }

@@ -3,7 +3,7 @@
 class Thermostat {
     constructor() {
         this._temp = 20;
-        this._powerSaver = false;
+        this._powerSaver = true;
     }
 
     currentTemp() {
