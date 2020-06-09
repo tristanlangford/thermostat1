@@ -11,11 +11,13 @@ class Thermostat {
     } 
 
     up() {
-        this._temp ++
+        if (this.maxTempCheck()) {
+            this._temp ++ 
+        };
     }
 
     down() {
-        if (this.tempCheck()) {
+        if (this.minTempCheck()) {
         this._temp --
         }
     }
@@ -24,9 +26,13 @@ class Thermostat {
         return this._powerSaver;
     }
 
-    tempCheck() {
+    minTempCheck() {
         return this._temp > 10
     }
+
+    maxTempCheck() {
+        return this._temp < 25; 
+    };
 
     changeMode() {
         this._powerSaver = !this._powerSaver

@@ -38,5 +38,12 @@ describe('Thermostat', function() {
         expect(thermostat.powerModeCheck()).toBeTruthy();
     })
 
+    it ('Will not go above 25 when powerSaver mode is true', function() {
+        thermostat.changeMode();
+        for (let i = 0; i < 10; i++) {
+            thermostat.up()
+        }
+        expect(thermostat.currentTemp()).toEqual(25);
+    })
 
 })
