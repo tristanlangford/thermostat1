@@ -12,5 +12,22 @@ describe('Thermostat', function() {
     }
     )
 
+    it('increases the currentTemp by 1 when .up() called', function() {
+        thermostat.up()
+        expect(thermostat.currentTemp()).toEqual(21)
+    })
+
+    it('descreases the currentTemp by 1 when .down() called', function() {
+        thermostat.down()
+        expect(thermostat.currentTemp()).toEqual(19)
+    })
+
+    it('will not go lower than 10 degrees', function() {
+        for (let i = 0; i <= 15; i ++) {
+            thermostat.down()
+        }
+        expect(thermostat.currentTemp()).toEqual(10)
+    })
+
 
 })
