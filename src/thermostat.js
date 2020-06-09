@@ -31,7 +31,11 @@ class Thermostat {
     }
 
     maxTempCheck() {
-        return this._temp < 25; 
+        if (this.powerModeCheck()) {
+            return this._temp < 25; 
+        } else {
+            return this._temp < 32;
+        }
     };
 
     changeMode() {
