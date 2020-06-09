@@ -1,10 +1,11 @@
-thermostat = new Thermostat()
 
-window.onload = function() {
- $('.currentTemp').text(thermostat.currentTemp() + ' c')
- $('.usageLevel').css('background-color', 'black')
- $('.powerSaver').css('background-color', 'green')
-}
+
+$(document).ready(function() {
+    var thermostat = new Thermostat();
+ $('.currentTemp').text(thermostat.currentTemp() + ' c');
+ $('.usageLevel').css('background-color', 'black');
+ $('.powerSaver').css('background-color', 'green');
+
 
 $('.up').click(function() {
     thermostat.up();
@@ -42,3 +43,4 @@ function usageCheck() {
         $('.usageLevel').css('background-color', 'red')
     }
 }
+})
