@@ -18,3 +18,12 @@ $('.resetTemperature').click(function() {
     thermostat.reset();
     $('.currentTemp').text(thermostat.currentTemp());
 })
+
+$('.powerSaver').click(function() {
+    thermostat.changeMode();
+    if (thermostat.powerModeCheck() === true) {
+        ($(this).css('background-color', 'green'))
+    } else {
+        ($(this).css('background-color', 'red'))
+    }
+})
