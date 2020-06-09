@@ -10,13 +10,12 @@
 <html> 
   <head>
     <title>Thermostat</title>
-    <script src='src/thermostat.js'></script>
   </head>
   <body>
-    <textarea height='50' width='60'>current temp</textarea>
-    <input type='button' class='up()' value='up'>
-    <input type='button' class='down()' value='down'>
-    <input type='button' class='resetTemperature()' value='reset temp'>
+    <textarea height='50' width='60' class='currentTemp'>current temp</textarea>
+    <input type='button' class='up' value='up'>
+    <input type='button' class='down' value='down'>
+    <input type='button' class='resetTemperature' value='reset temp'>
     <form class="powerSaver()">
       <label for='on'>power saver mode on</label>
       <input type="radio" class="powerSaver()" value='on' name='powerSaver'>
@@ -25,4 +24,8 @@
     </form>
     <input type='text' width = 10 height='10' class = 'usageLevel()'><p>this will need formating to change colour based on usage</p>
   </body>
+  <script src='src/thermostat.js'></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src='jquery.js'></script>
 </html>
+
