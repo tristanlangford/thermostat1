@@ -1,23 +1,20 @@
 
-<p>
- current temp - text field - textarea
- up button - button
- down button - button
- power saver button button/radio
- power saver status 
- usage-level: colour display - small text box - colour change.
-</p>
 <html> 
   <head>
+    <style> 
+    body {
+      text-align: center;
+    }
+    </style>
     <title>Thermostat</title>
   </head>
   <body>
-    <textarea height='50' width='60' class='currentTemp'>current temp</textarea>
+    <p height='50' width='60' class='currentTemp'></p><br>
     <input type='button' class='up' value='up'>
     <input type='button' class='down' value='down'>
-    <input type='button' class='resetTemperature' value='reset temp'>
-    <input type='button' class='powerSaver' value='Change power saver mode'>
-    <input type='text' width = 10 height='10' class = 'usageLevel()'><p>this will need formating to change colour based on usage</p>
+    <input type='button' class='resetTemperature' value='reset temp'><br>
+    <input type='button' class='powerSaver' value='Change power saver mode'><br>
+    <input type='text' width ='5px' height='5px' class ='usageLevel'>
   </body>
   <script src='src/thermostat.js'></script>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
