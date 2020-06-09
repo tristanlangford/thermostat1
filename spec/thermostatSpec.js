@@ -29,5 +29,14 @@ describe('Thermostat', function() {
         expect(thermostat.currentTemp()).toEqual(10)
     })
 
+    it ('Creates the thermostat with powerSaving mode off (false)', function () {
+        expect(thermostat.powerModeCheck()).toEqual(false)
+    });
+
+    it ('Can have powerSaving mode turned to on using changeMode', function() {
+        thermostat.changeMode()
+        expect(thermostat.powerModeCheck()).toBeTruthy();
+    })
+
 
 })
