@@ -42,4 +42,18 @@ class Thermostat {
         this._powerSaver = !this._powerSaver
     }
 
+    reset() {
+        this._temp = 20
+    }
+
+    usageLevel() {
+        if (this._temp < 18) {
+            return 'low-usage'
+        } else if (this._temp < 25) {
+            return 'medium-usage'
+        } else {    
+            return 'high-usage'
+        }
+    }
+
 }
